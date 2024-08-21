@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import './App.css';
 import CitySelector from './components/citySelector';
+import CityCard from './components/cityCard';
 
 function App() {
   const [card, setCard] = useState({
-    name: 'Осака',
+    name: 'Токио',
     description:
-      'Город в центральной части острова Хонсю, известен своими современными достопримечательностями и активной ночной жизнью.',
+      'Столица Японии, известная своими неоновыми огнями, многолюдностью и современной архитектурой.',
     imageUrl:
-      'https://sportishka.com/uploads/posts/2022-04/1650631594_29-sportishka-com-p-osaka-gorod-v-yaponii-krasivo-foto-30.jpg',
+      'https://www.topmagazine.cz/wp-content/uploads/2021/06/tokio-1024x576.jpg',
     facts: [
-      'Осака известна своим замком, который играл ключевую роль в объединении Японии в XVI веке.',
-      'Город является кулинарной столицей Японии.',
+      'Токио - самый населенный мегаполис в мире.',
+      'Здесь расположена самая высокая башня в Японии - Токийская башня.',
+      'В Токио проходят множество культурных событий и фестивалей.',
     ],
   });
 
@@ -22,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <CitySelector selectedCard={card} setSelectedCard={setSelectedCard} />
+      <CityCard {...card} />
     </div>
   );
 }
