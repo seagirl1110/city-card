@@ -23,8 +23,10 @@ function App() {
 
   return (
     <div className="App">
-      <CitySelector selectedCard={card} setSelectedCard={setSelectedCard} />
-      <CityCard {...card} />
+      <div className="content-wrapper">
+        <CitySelector selectedCard={card} setSelectedCard={setSelectedCard} />
+        <CityCard {...card} />
+      </div>
     </div>
   );
 }

@@ -1,8 +1,10 @@
+import styles from './styles.module.css';
+
 function CityCard({ name, description, imageUrl, facts }) {
   return (
-    <div>
-      <h2>{name}</h2>
-      <img src={imageUrl} alt={'Image-' + name} />
+    <div className={styles.card}>
+      <h3>{name}</h3>
+      <img src={imageUrl} alt={'Image-' + name} className={styles.img} />
       <p>{description}</p>
       <ul>
         {facts.map((item, index) => (

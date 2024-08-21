@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 const citiesData = [
   {
     name: 'Токио',
@@ -64,12 +66,14 @@ function CitySelector({ selectedCard, setSelectedCard }) {
   };
 
   return (
-    <form>
+    <form className={styles.form}>
+      <h2>Выберите город:</h2>
       <select
         value={selectedCard.name}
         onChange={handleChange}
         name="city"
         id="city"
+        className={styles.select}
       >
         {citiesData.map((city, index) => (
           <option key={index}>{city.name}</option>
